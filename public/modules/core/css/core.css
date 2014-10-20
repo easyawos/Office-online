@@ -24,7 +24,7 @@ body h2, h3{
 
 .homeImage {
 	padding: 10px;
-	background:  -webkit-linear-gradient(bottom, rgba(122, 122, 122, 0.5), rgba(250, 250, 250, 0.5)), url(/modules/core/img/brand/8.jpg) no-repeat;
+	background:  -webkit-linear-gradient(bottom, rgba(122, 122, 120, 0.5), rgba(250, 250, 250, 0.5)), url(/modules/core/img/brand/8.jpg) no-repeat;
 	height: 100%;
 	width: 100%;
 }
