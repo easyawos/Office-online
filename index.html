@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<body>
+
+<Form method="post" onsubmit="return _s(this)">
+	<input type='text' name='chat' style='padding:15px;'/>
+	<br/>
+	<input type="submit" style='padding:15px;'/>
+
+	<div id='chd' style="width:400px;border:1px solid #ccc;background:#f4f4f4;"></div>
+</Form>
+<script type="text/javascript" src="./node_modules/socket.io/node_modules/socket.io-client/socket.io.js">
+</script>
+
+<script type="text/javascript">
+var $ = function(id){return document.getElementById(id);}
+	var server = io.connect("http://localhost:8080");
+	server.on("connect",function(data){
+		var nickname = prompt("Enter a nickname");
+		server.emit("join",nickname);
+
+	})
+	server.on("messages",function(data){
+		//console.log(data.hello);
+		console.log(data);
+		$("chd").innerHTML += '<p>'+data+'</p>';
+	})
+
+	function _s(id)
+	{
+		var txt = id.chat.value;
+		server.emit("messages",txt);
+
+		return false;
+	}
+</script>
+</body>
+</html>		

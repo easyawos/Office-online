@@ -1,0 +1,73 @@
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty{
+    border-color:#FA787E;
+}
+.ng-valid.ng-dirty{
+    border-color:#78FA89;
+}
+
+body {
+	background: url(/modules/core/img/brand/body-tail.gif);
+/*	background-color: #E0E0E0;
+*//*	background: url(../img/brand/4.jpg);
+*/
+}
+
+body h2{
+	font-family: 'changa one', 'Lobster Two', sans-serif;
+}
+
+body h3{
+	font-family: 'changa one', 'Lobster Two', sans-serif;
+}
+
+.homeImage {
+	padding: 10px;
+	background: url(/modules/core/img/brand/7.png) no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+.row {
+		padding: 10px;
+}
+
+.login-form-bg {
+	background-color: white;
+	border: 15px solid;
+	border-radius: 15px;
+	margin-top: 50px;
+	border-color: white;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+}
+
+.displayName{
+	font-size: 1.2em;
+	display: inline-block;
+/*	border: solid 3px #08c;
+*/	padding: 7px 12px;
+/*	border-radius: 2px;
+*/	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #08c;
+	font-family: 'changa one', 'Lobster Two', sans-serif;
+}
+
+  .usersData {
+/*  	font-family: 'Lobster Two', sans-serif, 'changa one';
+*/  	font-size: 1em;
+	font-family: 'changa one', 'Lobster Two', sans-serif;
+}
+
+  a img{
+  	height: 20px;
+  }

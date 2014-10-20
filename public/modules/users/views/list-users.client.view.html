@@ -1,0 +1,21 @@
+<section data-ng-controller="UsersController" data-ng-init="find()" class="container" >
+	<div class="container">
+		
+		<div class="page-header">
+			<h3>Users</h3>
+		</div>
+		<div class="list-group">
+			<a data-ng-href="#!/users/{{user._id}}" data-ng-repeat="user in users" class="list-group-item" >
+
+				<span class="displayName"> Display Name:</span><span class="usersData" data-ng-bind="user.displayName"></span>
+				 <span class="displayName">Phone Number:</span><span class="usersData" data-ng-bind="user.phoneNumber"></span>
+				 <span class="displayName">E-mail:</span><span class="usersData" data-ng-bind="user.email"></span>
+			</a>
+		</div>
+		<div class="alert alert-warning text-center" data-ng-if="users.$resolved && !users.length">
+			No Users yet, why don't you <a href="/#!/users/signup">create one</a>?
+		</div>
+	</div>
+</section>
+
+				

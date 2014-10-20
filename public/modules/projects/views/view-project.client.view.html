@@ -1,0 +1,45 @@
+<section data-ng-controller="ProjectsController" data-ng-init="findOne()">
+<div class="container">
+	<div class="page-header">
+		<h3 data-ng-bind="project.title"></h3>
+	</div>
+	<div class="pull-right" data-ng-show="authentication.user._id == project.user._id">
+		<a class="btn btn-primary" href="/#!/projects/{{project._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="project.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="project.user.displayName"></span>
+		</em>
+	</small>
+	<p class="lead" data-ng-bind="project.content"></p><br>
+
+ 	<div ng-repeat="reply in projectAnswers">
+		<em class="text-muted">
+			Work Submitted on
+			<span data-ng-bind="reply.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="reply.user.displayName"></span>
+		</em>
+
+		<div ng-repeat="url in reply.answer">
+		<a ng-href='{{url}}'><p data-ng-bind="reply.answer"></p></a>
+		</div>
+	</div><br>
+
+    <div class="form-group">
+        <label for="answer">Upload Finished Projects</label>
+        <div class="controls">
+            <input type="file" id="uploadJobImg" data-ng-file-select="onFileSelect($files)">
+        </div>
+    </div>
+
+</div>
+</section>

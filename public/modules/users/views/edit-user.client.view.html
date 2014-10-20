@@ -1,0 +1,100 @@
+<section class="row" data-ng-controller="UsersController" data-ng-init="findOne()">
+
+	<div class="col-xs-offset-3 col-xs-6 col-md-offset-4 col-md-4 login-form-bg">
+			<h3 class="text-center">Edit User Profile</h3>
+			<form name="userForm" data-ng-submit="update(userForm.$valid)" class="signin form-horizontal" novalidate class="signin form-horizontal">
+			<fieldset>
+				<div class="form-group">
+					<div data-ng-show="error" class="text-center text-danger">
+						<div class="alert alert-danger" role="alert">
+							<strong data-ng-bind="error"></strong>
+						</div>					
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-user"></i>
+						</span>
+						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="user.firstName" placeholder="First Name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-user"></i>
+						</span>
+						<input type="text" id="lastName" name="lastName" class="form-control" data-ng-model="user.lastName" placeholder="Last Name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+								@
+						</span>
+						<input type="email" id="email" name="email" class="form-control" data-ng-model="user.email" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-user"></i>			
+						</span>
+					<input type="text" id="username" name="username" class="form-control" data-ng-model="user.username" placeholder="Username">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-asterisk"></i>			
+						</span>
+					<input type="password" id="password" name="password" class="form-control" data-ng-model="user.password" placeholder="Password">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-home"></i>				
+						</span>
+					<TEXTAREA id="address" name="address" class="form-control" data-ng-model="user.address" placeholder="Address"></TEXTAREA>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="text-muted glyphicon glyphicon-earphone"></i>	
+						</span>
+					<input type="text" id="phoneNumber" name="phoneNumber" class="form-control" data-ng-model="user.phoneNumber" placeholder="Phone Number">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+								^
+						</span>
+					<input type="text" id="position" name="position" class="form-control" data-ng-model="user.position" placeholder="Position">
+					</div>
+				</div>
+<!-- 				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+								#
+						</span>
+					<input type="text" id="salary" name="salary" class="form-control" data-ng-model="user.salary" placeholder="salary">
+					</div>
+				</div>	 -->	
+				<div class="form-group"> <label for="user">Type of Account:&nbsp;</label>
+         			<label for = "user">User</label>
+         			<input type = "radio" name = "roles" id = "user" ng-value = "false"  data-ng-model="user.isAdmin"  /> 
+         			<label for = "admin">Admin</label>
+         			<input type = "radio" name = "roles" id = "admin" ng-value = "true"  data-ng-model="user.isAdmin" /> 
+          		</div>
+
+
+				<div class="text-center form-group">
+					<input type="submit" value="Update" class="btn btn-default btn-lg btn-success btn-block">
+				</div>
+			</fieldset>
+</section>
+
+

@@ -1,0 +1,28 @@
+<section data-ng-controller="UsersController" data-ng-init="findOne()">
+	<div class="container">
+		<div class="page-header">
+			<h3 data-ng-bind="user.displayName"></h3>
+		</div>
+		<div class="pull-right" >
+			<a class="btn btn-primary" href="/#!/users/{{user._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i>
+			</a>
+			<a class="btn btn-primary" data-ng-click="remove();">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</div>
+		<span class="displayName"> FIRST NAME:</span><span class="usersData" data-ng-bind="user.firstName"></span><br>
+		<span class="displayName"> LAST NAME:</span><span class="usersData" data-ng-bind="user.lastName"></span><br>
+		<span class="displayName"> ROLE:</span><span class="usersData" data-ng-bind="user.roles[0]"></span><br>
+		<span class="displayName"> E-MAIL:</span><span class="usersData" data-ng-bind="user.email"></span><br>
+		<span class="displayName">PHONE NUMBER:</span><span class="usersData" data-ng-bind="user.phoneNumber"></span><br>
+		<span class="displayName">ADDRESS:</span><span class="usersData" data-ng-bind="user.address"></span><br>
+		<span class="displayName">POSITION: </span><span class="usersData" data-ng-bind="user.position"></span><br>
+		<small>
+			<em class="text-muted">
+				CREATED ON:<span data-ng-bind="user.created | date:'mediumDate'"></span>
+			</em>
+		</small>
+	</div>
+</section>
+
