@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db:'mongodb://heroku:7SVb2PuL2BG21DI_lKV8sJjzcIlKNNgNPEfLvUOXFXleVFiGJSAhGmBKgvpS49hxJH1hvq3WIuOwNfVV9VoeVQ',
+	db:'mongodb://heroku:zb2tHtuSDItTjsJitgJAiemsLXZLzLjwKKA7l4lZjr6NJQ7Q7QmjDVIcjCkPecnLX7EIb49UOcukFlP6phkIfw@linus.mongohq.com:10082/app30857590',
 	assets: {
 		lib: {
 			css: [
